@@ -1,13 +1,30 @@
-// versi 2, FSM dipisah ke fungsi & file tersendiri
 #include <mega328p.h>
 #include "fsm.h"
+#include "stdio.h"
 
 int state=0;
 // Timer1 output compare A interrupt service routine
 interrupt [TIM1_COMPA] void timer1_compa_isr(void)
 {
     int output;
-    fsm(&state,&output);     
+    int input;
+    volatile int input_port;
+    input_port=PIND;        
+    input_port=1<<2;
+    input_port=0;   
+    input_port=1<<2;
+    if (input_port & (1<<2)==(1<<2)) {
+        input=0; // active low
+    }else{
+        input=1;
+    }  
+    if (input==1){
+        output=1;
+    }else{       
+        output=0;
+    }                  
+
+    // fsm(&state,&output);         
     if(output==0)
         PORTB=PORTB&~(1<<5);
     else                    
@@ -32,8 +49,10 @@ CLKPR=(0<<CLKPCE) | (0<<CLKPS3) | (0<<CLKPS2) | (0<<CLKPS1) | (0<<CLKPS0);
 // Port B initialization
 // Function: Bit7=In Bit6=In Bit5=In Bit4=In Bit3=In Bit2=In Bit1=In Bit0=In 
 DDRB=(0<<DDB7) | (0<<DDB6) | (1<<DDB5) | (0<<DDB4) | (0<<DDB3) | (0<<DDB2) | (0<<DDB1) | (0<<DDB0);
+DDRD=0;
+PORTD=1<<2;
 // State: Bit7=T Bit6=T Bit5=T Bit4=T Bit3=T Bit2=T Bit1=T Bit0=T 
-PORTD=1<<3; // PD3 sebagai input dengan pull up
+
 // Timer/Counter 1 initialization
 // Clock source: System Clock
 // Clock value: 62.500 kHz
@@ -55,11 +74,6 @@ ICR1H=0x00;
 ICR1L=0x00;
 OCR1AH=0x7A;
 OCR1AL=0x11;
-
-OCR1AH=0x3D;
-OCR1AL=0x08;
-
-
 OCR1BH=0x00;
 OCR1BL=0x00;
 // Timer/Counter 2 initialization
@@ -84,6 +98,6 @@ TIMSK1=(0<<ICIE1) | (0<<OCIE1B) | (1<<OCIE1A) | (0<<TOIE1);
 while (1)
       {
       // Place your code here
-
+//      printf("%d",PIND);
       }
 }
