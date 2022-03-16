@@ -24,3 +24,6 @@ fsm-toggle/Debug/Link/ctype.al
 *.cbi
 *.cci
 *.cproj
+fsm-kedip-v2/fsm-kedip-v2.componentinfo.xml
+*.cfg
+*.cwp
