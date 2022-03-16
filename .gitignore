@@ -18,3 +18,9 @@
 *.c~
 *.prj~
 *.fct
+fsm-toggle/Debug/Link/ctype.al
+*.al
+*.ol
+*.cbi
+*.cci
+*.cproj
