@@ -46,5 +46,4 @@ void fsm(int *state,int input,int *output){
         break;
         }        
     }  
-
 }

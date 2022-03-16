@@ -28,30 +28,23 @@ Data Stack size         : 512
 #include <fsm.h>
 
 int state=STATE_OFF1;
-
 volatile int input_port=0;
-// Timer1 output compare A interrupt service routine
 interrupt [TIM1_COMPA] void timer1_compa_isr(void)
 {
-// Place your code here
     int output;
-    int input;
- 
+    int input; 
     input_port=PIND & (1<<2);        
     if (input_port ==(1<<2)) {
         input=0; // active low
     }else{
         input=1;
     }              
-        
-    fsm(&state,input,&output);
-             
+    fsm(&state,input,&output);             
     if(output==0)
         PORTB=PORTB&~(1<<5);
     else                    
         PORTB=PORTB|(1<<5);
 }
-
 // Declare your global variables here
 
 void main(void)
