@@ -200,7 +200,7 @@ TWCR=(0<<TWEA) | (0<<TWSTA) | (0<<TWSTO) | (0<<TWEN) | (0<<TWIE);
 
 while (1)
       {
-      // Place your code here
+      // Place your code here                       
         printf("hello %d\r\n",input_port);
       }
 }

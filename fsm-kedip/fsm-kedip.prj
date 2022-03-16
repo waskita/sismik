@@ -539,7 +539,7 @@ Row=0
 Column=0
 ScrollPosX=0
 ScrollPosY=0
-TimeStamp=1416665476
+TimeStamp=1416704137
 [BookmarksFoldedCode]
 Files=2
 F1=C:\work\2hzsaja\2hzsaja.c
@@ -578,8 +578,8 @@ F1=C:\cvavreval\inc\mega328p.h
 F2=C:\cvavreval\inc\mega328p_bits.h
 [Bookmarks2]
 TimeStamp=1416665458
-Row=9
-Column=71
+Row=10
+Column=56
 ScrollPosX=0
 ScrollPosY=0
 BK0=-1
