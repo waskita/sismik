@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1733630626 source:s:\work\sismik\desktop_fsm_blink_extended\fsm.c
+	"fsm.h"
+
+1733630510 s:\work\sismik\desktop_fsm_blink_extended\fsm.h
+
+1733630561 source:s:\work\sismik\desktop_fsm_blink_extended\main.c
+	<stdio.h>
+	<stdlib.h>
+
