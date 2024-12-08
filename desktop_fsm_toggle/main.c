@@ -7,6 +7,7 @@ int main()
     int i;
     printf("Pengujian FSM\n");
     int fsm_state, fsm_input,fsm_output;
+    fsm_input=0;
     fsm_init(&fsm_state,&fsm_output); // inisialisasi state
     for(i=0; i<10; i++)
     {

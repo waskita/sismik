@@ -4,3 +4,8 @@
 
 1733617856 s:\work\sismik\desktop_fsm_toggle\fsm.h
 
+1733617953 source:s:\work\sismik\desktop_fsm_toggle\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fsm.h"
+
