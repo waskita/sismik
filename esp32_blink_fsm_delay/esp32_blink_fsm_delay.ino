@@ -1,3 +1,4 @@
+// LED blink with FSM and delay in superloop
 #include "fsm.h"
 
 #define LED_OUTPUT 22  // 22 untuk lolin32_lite, 2 untuk Devkit-C1
