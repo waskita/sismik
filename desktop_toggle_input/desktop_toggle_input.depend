@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1733640186 source:s:\work\sismik\desktop_toggle_input\main.c
+	<stdio.h>
+	<stdlib.h>
+	"fsm.h"
+
+1733640047 source:s:\work\sismik\desktop_toggle_input\fsm.c
+	"fsm.h"
+	"string.h"
+
+1733640216 s:\work\sismik\desktop_toggle_input\fsm.h
+
