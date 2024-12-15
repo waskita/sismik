@@ -24,9 +24,7 @@ void setup() {
     Serial.println("GET /");                                    // for debugging
     request->send(200, "text/html", "<html><body><h1>Hello, ESP32!</h1></body></html>");
   });
-  server.onNotFound([](AsyncWebServerRequest* request) {
-    request->send(404);
-  });
+  
   // Start the server
   server.begin();
 }
